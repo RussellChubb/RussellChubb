@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Russell :)</h1>
-<h3 align="center">Aspiring Backend Engineer</h3>
+<h3 align="center">Aspiring Backend Developer</h3>
 
 - 🌱 I’m currently learning **Python (Django, Pandas, NumPy, Mat-Plotlib)**
 
