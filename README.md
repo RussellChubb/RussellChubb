@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Russell :)</h1>
-<h3 align="center">Aspiring Developer</h3>
+<h3 align="center">Aspiring Data Engineer</h3>
 
-- 🌱 I’m currently learning **Python (Django, Pandas, NumPy, Mat-Plotlib)**
+- 🌱 I’m currently learning **Python**
 
 - 📫 How to reach me **russell.d.chubb@gmail.com**
 
