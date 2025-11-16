@@ -40,4 +40,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git add .
           git diff-index --quiet HEAD || git commit -m "Updated README"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
