@@ -34,10 +34,8 @@ jobs:
           USER_NAME: ${{ secrets.USER_NAME }}
         run: python today.py
 
-      - name: Commit changes
+      - name: Push changes
         run: |
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "Updated README"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git push https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
