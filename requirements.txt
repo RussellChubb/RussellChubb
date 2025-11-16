@@ -1,8 +1,4 @@
-datetime
-dateutil
+python-dateutil
 requests
-os
 lxml
-time
-hashlib
-dotenv
+python-dotenv
