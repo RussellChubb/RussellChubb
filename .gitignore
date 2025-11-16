@@ -1,0 +1,3 @@
+# Git-Ignore File
+.env
+cache/
