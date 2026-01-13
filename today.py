@@ -353,7 +353,7 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
 
     # Align everything with calculated total widths for consistent dot alignment
     # The widths here are chosen so all lines end at roughly the same column visually
-    justify_format(root, 'age_data', age_data, total_width=30)
+    justify_format(root, 'age_data', age_data, total_width=60)
     justify_format(root, 'commit_data', commit_data, total_width=22)
     justify_format(root, 'star_data', star_data, total_width=14)
     justify_format(root, 'repo_data', repo_data, total_width=6)
