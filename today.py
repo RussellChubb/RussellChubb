@@ -351,10 +351,9 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     tree = etree.parse(filename)
     root = tree.getroot()
 
-    # Age / uptime
+    # Align everything with calculated total widths for consistent dot alignment
+    # The widths here are chosen so all lines end at roughly the same column visually
     justify_format(root, 'age_data', age_data, total_width=30)
-
-    # GitHub stats
     justify_format(root, 'commit_data', commit_data, total_width=22)
     justify_format(root, 'star_data', star_data, total_width=14)
     justify_format(root, 'repo_data', repo_data, total_width=6)
@@ -369,25 +368,25 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
 def justify_format(root, element_id, new_text, total_width=22):
     """
     Updates an element's text and adjusts the preceding dots for alignment.
-    - total_width: desired total width for the dots + text (approximate)
+    - total_width: approximate width of text + dots for alignment
     """
     if isinstance(new_text, int):
         new_text = f"{new_text:,}"
     new_text = str(new_text)
 
-    # Update the value
+    # Update the value in the SVG
     find_and_replace(root, element_id, new_text)
 
-    # Compute how many dots to add
+    # Calculate how many dots to add
     dot_string = ''
-    if total_width > len(new_text):
-        dot_count = total_width - len(new_text)
-        if dot_count <= 2:
-            dot_map = {0: '', 1: ' ', 2: '. '}
-            dot_string = dot_map[dot_count]
-        else:
-            dot_string = ' ' + ('.' * dot_count) + ' '
-    
+    dot_count = total_width - len(new_text)
+
+    if dot_count <= 2:
+        dot_map = {0: '', 1: ' ', 2: '. '}
+        dot_string = dot_map.get(dot_count, '')
+    else:
+        dot_string = ' ' + ('.' * dot_count) + ' '
+
     # Update the corresponding _dots element
     find_and_replace(root, f"{element_id}_dots", dot_string)
 
