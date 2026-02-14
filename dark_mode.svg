@@ -46,7 +46,7 @@ text, tspan {white-space: pre;}
 <!-- INFO PANEL -->
 <text x="600" y="30" fill="#c9d1d9">
 <tspan x="600" y="30">Russell Chubb</tspan> -—————————————————————————————————————————————————————
-<tspan x="600" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ............. </tspan><tspan class="value" id="age_data">25 years, 2 months, 17 days</tspan>
+<tspan x="600" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ............. </tspan><tspan class="value" id="age_data">25 years, 2 months, 18 days</tspan>
 <tspan x="600" y="110" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">New Zealand (Born in Australia)</tspan>
 <tspan x="600" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> .......................................... </tspan><tspan class="value">VSCode, Neovim</tspan>
 <tspan x="600" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">Python, SQL</tspan>
