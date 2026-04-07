@@ -491,7 +491,7 @@ def svg_overwrite(
     root = tree.getroot()
 
     # Age / uptime
-    justify_format(root, "age_data", age_data, total_width=55)
+    justify_format(root, "age_data", age_data, total_width=53)
 
     # GitHub stats
     justify_format(root, "commit_data", commit_data, total_width=22)
