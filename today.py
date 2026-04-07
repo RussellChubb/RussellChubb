@@ -549,13 +549,13 @@ def svg_overwrite(
 def justify_format(root, element_id, new_text, total_width=22):
     """
     Updates an element's text and adjusts the preceding dots for alignment.
-    - total_width: desired total width for the dots + text (approximate)
+    - total_width: approximate width of text + dots for alignment
     """
     if isinstance(new_text, int):
         new_text = f"{new_text:,}"
     new_text = str(new_text)
 
-    # Update the value
+    # Update the value in the SVG
     find_and_replace(root, element_id, new_text)
 
     # Compute how many dots to add
